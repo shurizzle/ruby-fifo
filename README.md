@@ -13,7 +13,7 @@ Reader Example:
     pipe.gets
     pipe.readline
 
-Write Example:
+Writer Example:
     pipe = Fifo.new('/path/to/file', :w, :nowait) #non-blocking
     # OR
     # pipe = Fifo.new('/path/to/file', :w, :wait)
