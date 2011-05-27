@@ -42,7 +42,7 @@ class Fifo
             @pipe = File.open(file, perms.to_s + {:wait => '', :nowait => '+'}[mode])
         end
 
-        def_delegators :@pipe, :read, :write, :close
+        def_delegators :@pipe, :read, :write, :close, :to_io
     end
 
     def print(*args)
