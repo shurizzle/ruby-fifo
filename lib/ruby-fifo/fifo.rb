@@ -5,11 +5,12 @@ class Fifo
   # Constructs a new Fifo.
   def initialize(file, perms = :r, mode = :nowait)
     unless [:r, :w].include?(perms)
-      raise "Unknown perms."
+      raise "Unknown file permission. Must be either :r or :w."
     end
 
     unless [:wait, :nowait].include?(mode)
-      raise "Unknown mode."
+      raise "Unknown file mode. Must be either :wait or :nowait for blocking" +
+            " or non-blocking respectively."
     end
 
     if not $POSIX
