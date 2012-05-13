@@ -5,6 +5,7 @@ describe Fifo do
   before(:each)   { delete_data_dir }
   after(:each)    { delete_data_dir }
 
+  # Nukes the spec/data directory.
   def delete_data_dir
     FileUtils.rm Dir['spec/data/*']
   end

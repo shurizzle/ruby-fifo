@@ -2,14 +2,6 @@ class Fifo
   # Module to allow delegation
   include Forwardable
 
-  class ::File
-    alias :owrite :write
-    def write(*args)
-      owrite(*args)
-      flush
-    end
-  end
-
   # Constructs a new Fifo.
   def initialize(file, perms = :r, mode = :nowait)
     unless [:r, :w].include?(perms)
@@ -36,7 +28,7 @@ class Fifo
       @pipe = File.open(file, perms)
     end
 
-    def_delegators :@pipe, :read, :write, :close, :to_io
+    def_delegators :@pipe, :read, :write, :close, :to_io, :flush
   end
 
   def print(*args)
@@ -45,12 +37,15 @@ class Fifo
     end
 
     write $OUTPUT_RECORD_SEPARATOR
+    flush
   end
 
   def puts(*args)
     args.each do |obj|
       self.write "#{obj.to_s.sub(/\n$/, '')}\n"
     end
+
+    flush
   end
 
   def getc
