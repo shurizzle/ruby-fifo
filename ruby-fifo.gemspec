@@ -7,7 +7,7 @@ Gem::Specification.new {|s|
     s.email                 = 'shura1991@gmail.com'
     s.homepage              = 'http://github.com/shurizzle/ruby-fifo'
     s.platform              = Gem::Platform::RUBY
-    s.required_ruby_version = '>= 1.9.1'
+    s.required_ruby_version = '>= 1.9.2'
     s.summary               = 'A cross-platform library to use named pipe'
     s.description           = s.summary
     s.files                 = Dir['lib/*']
