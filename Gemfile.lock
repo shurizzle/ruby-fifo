@@ -9,6 +9,7 @@ GEM
       coderay (~> 1.0.5)
       method_source (~> 0.7.1)
       slop (>= 2.4.4, < 3)
+    rake (0.9.2.2)
     rspec (2.10.0)
       rspec-core (~> 2.10.0)
       rspec-expectations (~> 2.10.0)
@@ -25,4 +26,5 @@ PLATFORMS
 DEPENDENCIES
   mkfifo
   pry
+  rake
   rspec
