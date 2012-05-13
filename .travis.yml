@@ -6,4 +6,4 @@ rvm:
   - rubinius
 
 before_install:
-  - sudo apt-get install ruby-dev
+  - sudo apt-get install ruby1.8-dev ruby1.9-dev
