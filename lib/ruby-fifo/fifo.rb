@@ -91,9 +91,8 @@ class Fifo
   def puts(*args)
     args.each do |obj|
       self.write "#{obj.to_s.sub(/\n$/, '')}\n"
+      flush
     end
-
-    flush
   end
 
   # Alias for read(1).
