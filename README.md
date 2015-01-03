@@ -4,6 +4,7 @@ FIFO
 A simple library multiplatform to handle named pipe, works like File.
 
 Reader Example:
+````ruby
     pipe = Fifo.new('/path/to/file') #non-blocking
     # OR
     # pipe = Fifo.new('/path/to/file', :r, :wait) #blocking
@@ -12,8 +13,9 @@ Reader Example:
     pipe.getc
     pipe.gets
     pipe.readline
-
+````
 Writer Example:
+````ruby
     pipe = Fifo.new('/path/to/file', :w, :nowait) #non-blocking
     # OR
     # pipe = Fifo.new('/path/to/file', :w, :wait)
@@ -21,3 +23,4 @@ Writer Example:
     pipe.write "HI"
     pipe.print "X"
     pipe.puts "OH", "HAI"
+````
