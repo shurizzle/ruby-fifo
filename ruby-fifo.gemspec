@@ -13,4 +13,5 @@ Gem::Specification.new {|s|
     s.extensions    = 'ext/mkrf_conf.rb'
     s.require_path  = 'lib'
     s.has_rdoc      = true
+    s.add_dependency 'rake'
 }
