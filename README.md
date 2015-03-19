@@ -1,4 +1,4 @@
-# ruby-fifo
+# ruby-fifo [![Build Status](https://travis-ci.org/shurizzle/ruby-fifo.svg?branch=master)](https://travis-ci.org/shurizzle/ruby-fifo)
 
 A small, simple library for using Fifos in Ruby. A Fifo is traditionally a Unix
 idea that lets processes communicate by writing to and reading from a special
