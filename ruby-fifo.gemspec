@@ -2,7 +2,7 @@ require 'rubygems'
 
 Gem::Specification.new {|s|
     s.name                  = 'ruby-fifo'
-    s.version               = '0.0.1'
+    s.version               = '0.1.0'
     s.author                = 'shura'
     s.email                 = 'shura1991@gmail.com'
     s.homepage              = 'http://github.com/shurizzle/ruby-fifo'
