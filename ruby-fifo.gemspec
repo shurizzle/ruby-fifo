@@ -10,7 +10,14 @@ Gem::Specification.new {|s|
     s.required_ruby_version = '>= 1.9.2'
     s.summary               = 'A cross-platform library to use named pipe'
     s.description           = s.summary
-    s.files                 = Dir['lib/*']
-    s.require_path          = 'lib'
+    s.require_paths         = ['lib']
     s.has_rdoc              = true
+
+    # exclude these files and directories from the gem
+    dir_exclude  = Regexp.new(%r{^(test|spec|features)/})
+    file_exclude = Regexp.new(/^(\.gitignore|\.travis|\.rubocop|\.rspec|Guardfile)/)
+    excludes     = Regexp.union(dir_exclude, file_exclude)
+
+    # add all files in the repository not matching any of the above
+    s.files = `git ls-files -z`.split("\x0").reject { |f| f.match(excludes) }
 }
