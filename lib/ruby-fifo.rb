@@ -11,5 +11,4 @@ else
   $POSIX = true
 end
 
-require 'ruby-fifo/fifo'
-
+require File.expand_path(File.join(libdir, 'ruby-fifo/fifo'))
