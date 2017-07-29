@@ -13,4 +13,5 @@ Gem::Specification.new {|s|
     s.files                 = Dir['lib/*']
     s.require_path          = 'lib'
     s.has_rdoc              = true
+    s.add_runtime_dependency 'mkfifo', '~> 0.1.1', '>= 0.1.1'
 }
