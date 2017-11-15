@@ -105,8 +105,8 @@ class Fifo
   # and gets.
   def readline
     str = ""
-    while ($_ = self.read(1)) != "\n"
-      str << $_
+    while (c = self.read(1)) != "\n"
+      str << c if c.is_a?(String)
     end
     str << "\n"
   end
