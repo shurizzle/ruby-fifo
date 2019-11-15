@@ -10,7 +10,7 @@ Gem::Specification.new {|s|
     s.required_ruby_version = '>= 1.9.2'
     s.summary               = 'A cross-platform library to use named pipe'
     s.description           = s.summary
-    s.files                 = Dir['lib/*']
+    s.files                 = Dir.glob('lib/*')
     s.require_path          = 'lib'
     s.has_rdoc              = true
 }
